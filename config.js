@@ -4,18 +4,18 @@
 
 const schedule = [
     {
-        title: "3ª Aula - EUPPC - Por que devemos desinstalar a escola?",
-    url: "https://youtu.be/_Jj7tUgrFbA?si=FpbpRUnrSzk48n3f",
+        title: "1ªAula - EUPPC - Apresentação da Disciplina EUPPC",
+    url: "https://youtu.be/Ol4YvwTu2tI?si=sGMBTiSbDu0N6CMG",
     type: "youtube"
     }, 
     {
-        title: "4ª Aula - EUPPC - Introdução ao documentário Schooling the World",
-    url: "https://youtu.be/wgpRePgjJUA?si=c9ZFsb4LvbhKmezc",
+        title: "2ª Aula - EUPPC - Leitura inspecional e leitura averiguativa",
+    url: "https://youtu.be/AhX7j03dhxI?si=snqXwJ_b0MVc2PVM",
     type: "youtube"
     },
     {
-        title: "Escolarizando o Mundo [Schooling the World]",
-    url: "https://youtu.be/6t_HN95-Urs?si=vMepQ1Xq1hy7XRai",
+        title: "Uma visão decolonial dos conhecimentos científicos | Katemari Rosa | TEDxBeloHorizonte",
+    url: "https://youtu.be/26Q0CZgPSgk?si=S81MAbn1OPDG-SfJ",
     type: "youtube"
     },
     {
@@ -39,3 +39,4 @@ const schedule = [
         type: "youtube"
     }, 
         ];
+
