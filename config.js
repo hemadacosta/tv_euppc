@@ -24,13 +24,13 @@ const schedule = [
         type: "youtube"
     },
     {
-        title: "Vermelho Brasil",
-        url: "https://youtu.be/6IAcEAV7hAM?si=bwV42d3bOfz1OZJb",
+        title: "Diálogos: Desafios para a decolonialidade",
+        url: "https://youtu.be/qFZki_sr6ws?si=tap6IbbvyR5-xhDI",
         type: "youtube"
     },
     {
-        title: "Entrevista com o pensador Ivan Illich",
-        url: "https://youtu.be/feHCNEdLSDE?si=wIRZkPAMhTkfZKmy",
+        title: "Arte Educação | SESC-MT - A colonialidade da arte - Módulo I",
+        url: "https://www.youtube.com/live/ojyLi3cLt9k?si=8dkwbB0Dx07XYhG-",
         type: "youtube"
     },
     {
@@ -39,10 +39,11 @@ const schedule = [
         type: "youtube"
     },  
     {
-        title: "Como corrupção de políticos devastou e impactou a perspectiva futura de Angola",
-        url: "https://youtu.be/LORo4bP5uMo?si=ztlBBZJGvBPgCwTl",
+        title: "Abecedário de Educação e Interculturalidade com VERA CANDAU",
+        url: "https://youtu.be/0OWPYJUaT10?si=gFlr__qvuwi1Uega",
         type: "youtube"
     }, 
         ];
+
 
 
