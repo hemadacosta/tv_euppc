@@ -19,6 +19,11 @@ const schedule = [
     type: "youtube"
     },
     {
+        title: "O Povo Brasileiro de Darcy Ribeiro - Matriz Tupi (parte 1)",
+        url: "https://youtu.be/rQOPdiEdX24?si=3ZILUGLididhjlnL",
+        type: "youtube"
+    },
+    {
         title: "Vermelho Brasil",
         url: "https://youtu.be/6IAcEAV7hAM?si=bwV42d3bOfz1OZJb",
         type: "youtube"
@@ -39,4 +44,5 @@ const schedule = [
         type: "youtube"
     }, 
         ];
+
 
