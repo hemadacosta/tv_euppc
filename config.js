@@ -43,13 +43,4 @@ const schedule = [
         url: "https://youtu.be/0OWPYJUaT10?si=gFlr__qvuwi1Uega",
         type: "youtube"
     }, 
-    {
-        title: "Como surgiram as Oferendas nas Encruzilhadas?",
-        url: "https://rumble.com/embed/v2137e5/?pub=4",
-        type: "youtube"
-    }, 
-        ];
-
-
-
-
+ ];
