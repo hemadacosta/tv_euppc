@@ -30,17 +30,17 @@ const schedule = [
     },
     {
         title: "Arte Educação | SESC-MT - A colonialidade da arte - Módulo I",
-        url: "https://www.youtube.com/live/ojyLi3cLt9k?si=8dkwbB0Dx07XYhG-",
+        url: "https://www.youtube.com/live/ojyLi3cLt9k?si=su8yV6kqpnsE7wYj",
         type: "youtube"
     },
     {
         title: "Um Triunfo na América - A Epopeia dos Sete Povos das Missões",
-        url: "https://youtu.be/6P6S71cSzYc?si=3vYOjCtVl4tClNrD",
+        url: "https://youtu.be/6P6S71cSzYc?si=eYr7KGlBoNkzQT19",
         type: "youtube"
     },  
     {
         title: "Abecedário de Educação e Interculturalidade com VERA CANDAU",
-        url: "https://youtu.be/0OWPYJUaT10?si=gFlr__qvuwi1Uega",
+        url: "https://youtu.be/0OWPYJUaT10?si=tRqlxLcpjuusR77D",
         type: "youtube"
     }, 
  ];
