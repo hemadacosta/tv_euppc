@@ -42,5 +42,10 @@ const schedule = [
         title: "Abecedário de Educação e Interculturalidade com VERA CANDAU",
         url: "https://youtu.be/0OWPYJUaT10?si=tRqlxLcpjuusR77D",
         type: "youtube"
+    },
+    {
+        title: "Roupa dos Brancos Mortos - Têxtil dos países ricos é lixo em países africanos (Grande Reportagem)",
+        url: "https://rumble.com/embed/v121yp5/?pub=4",
+        type: "youtube"
     } 
  ];
