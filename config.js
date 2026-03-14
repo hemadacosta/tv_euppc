@@ -29,8 +29,8 @@ const schedule = [
         type: "youtube"
     },
     {
-        title: "Arte Educação | SESC-MT - A colonialidade da arte - Módulo I",
-        url: "https://www.youtube.com/live/ojyLi3cLt9k?si=su8yV6kqpnsE7wYj",
+        title: "Angola, um país rico com 20 milhões de pobres",
+        url: "https://youtu.be/zc6p4iG_jCw?si=lmXUhJtQ1WSYniiT",
         type: "youtube"
     },
     {
@@ -42,5 +42,5 @@ const schedule = [
         title: "Abecedário de Educação e Interculturalidade com VERA CANDAU",
         url: "https://youtu.be/0OWPYJUaT10?si=tRqlxLcpjuusR77D",
         type: "youtube"
-    }, 
+    } 
  ];
