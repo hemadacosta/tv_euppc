@@ -44,8 +44,8 @@ const schedule = [
         type: "youtube"
     },
     {
-        title: "Roupa dos Brancos Mortos - Têxtil dos países ricos é lixo em países africanos (Grande Reportagem)",
-        url: "https://rumble.com/embed/v121yp5/?pub=4",
+        title: "Aníbal Quijano en el III Congreso Latinoamericano y Caribeño de Ciencias Sociale",
+        url: "https://youtu.be/OxL5KwZGvdY?si=HdDr4b72oVltwte3",
         type: "youtube"
     }, 
  ];
