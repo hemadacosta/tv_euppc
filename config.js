@@ -47,5 +47,5 @@ const schedule = [
         title: "Roupa dos Brancos Mortos - Têxtil dos países ricos é lixo em países africanos (Grande Reportagem)",
         url: "https://rumble.com/embed/v121yp5/?pub=4",
         type: "youtube"
-    } 
+    }, 
  ];
