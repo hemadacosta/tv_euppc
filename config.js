@@ -47,5 +47,5 @@ const schedule = [
         title: "Aníbal Quijano en el III Congreso Latinoamericano y Caribeño de Ciencias Sociale",
         url: "https://youtu.be/OxL5KwZGvdY?si=HdDr4b72oVltwte3",
         type: "youtube"
-    }, 
+    } 
  ];
