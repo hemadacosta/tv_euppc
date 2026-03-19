@@ -50,7 +50,7 @@ const schedule = [
     },
     {
         title: "Indochina (1993)",
-        url: "https://drive.google.com/file/d/1vs_Y4FcGa_6xhURvcv6O4DH-DajWtTD9/preview",
+        url: "https://drive.google.com/file/d/1vs_Y4FcGa_6xhURvcv6O4DH-DajWtTD9/view?usp=sharing",
         type: "googledrive"
     }
  ];
