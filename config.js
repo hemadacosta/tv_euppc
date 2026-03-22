@@ -3,49 +3,54 @@
 // Tipos suportados: 'youtube', 'vimeo', 'googledrive'
 
 const schedule = [
-    {
-        title: "1ªAula - EUPPC - Apresentação da Disciplina EUPPC",
-    url: "https://youtu.be/Ol4YvwTu2tI?si=sGMBTiSbDu0N6CMG",
-    type: "youtube"
+{
+        title: "3ª Videoaula - EUPPC - Por que devemos desinstalar a escola",
+        url: "https://youtu.be/_Jj7tUgrFbA?si=KxPDpfuTWYlcq_Ah",
+        type: "youtube"
+    },
+{
+        title: "4ª Videoaula - EUPPC - Introdução ao documentário Schooling the World",
+        url: "https://youtu.be/wgpRePgjJUA?si=4XmTh4XfNjgBlVj7",
+        type: "youtube"
+    },
+{
+        title: "Schooling the World (Escolarizando o Mundo), o último fardo do homem branco",
+        url: "https://youtu.be/6t_HN95-Urs?si=J8XEwF_pH_51lqiB",
+        type: "youtube"
+    },
+{
+        title: "Capitão Fantástico (2016)",
+        url: "https://youtu.be/hkzW4ft8P0k?si=-vM-lQuRdcvoH8tZ",
+        type: "youtube"
+    },
+{
+        title: "Entrevista com o pensador Ivan Illich",
+        url: "https://youtu.be/feHCNEdLSDE?si=wIRZkPAMhTkfZKmy",
+        type: "youtube"
+    },
+{
+        title: "Como corrupção de políticos devastou e impactou a perspectiva futura de Angola",
+        url: "https://youtu.be/LORo4bP5uMo?si=ztlBBZJGvBPgCwTl",
+        type: "youtube"
     }, 
-    {
-        title: "2ª Aula - EUPPC - Leitura inspecional e leitura averiguativa",
-    url: "https://youtu.be/AhX7j03dhxI?si=snqXwJ_b0MVc2PVM",
-    type: "youtube"
-    },
-    {
-        title: "Uma visão decolonial dos conhecimentos científicos | Katemari Rosa | TEDxBeloHorizonte",
-    url: "https://youtu.be/26Q0CZgPSgk?si=S81MAbn1OPDG-SfJ",
-    type: "youtube"
-    },
-    {
-        title: "O Povo Brasileiro de Darcy Ribeiro - Matriz Tupi (parte 1)",
-        url: "https://youtu.be/rQOPdiEdX24?si=3ZILUGLididhjlnL",
+{
+        title: "Arte Educação | SESC-MT - A colonialidade da arte - Módulo I",
+        url: "https://www.youtube.com/live/ojyLi3cLt9k?si=su8yV6kqpnsE7wYj",
         type: "youtube"
     },
-    {
-        title: "Diálogos: Desafios para a decolonialidade",
-        url: "https://youtu.be/qFZki_sr6ws?si=tap6IbbvyR5-xhDI",
+{
+        title: "O Povo Brasileiro de Darcy Ribeiro - Matriz Lusa (parte 2)",
+        url: "https://youtu.be/ZxOCLwMQ_ik?si=r3CT8fNKtYfvscNI",
         type: "youtube"
     },
-    {
-        title: "Angola, um país rico com 20 milhões de pobres",
-        url: "https://youtu.be/zc6p4iG_jCw?si=lmXUhJtQ1WSYniiT",
+{
+        title: "Ensaios sobre a colonialidade do poder de Aníbal Quijano",
+        url: "https://youtu.be/sA1AQ-xYfys?si=LCrCfxSujBIm4qFw",
         type: "youtube"
     },
-    {
-        title: "Um Triunfo na América - A Epopeia dos Sete Povos das Missões",
-        url: "https://youtu.be/6P6S71cSzYc?si=eYr7KGlBoNkzQT19",
-        type: "youtube"
-    },  
-    {
-        title: "Abecedário de Educação e Interculturalidade com VERA CANDAU",
-        url: "https://youtu.be/0OWPYJUaT10?si=tRqlxLcpjuusR77D",
-        type: "youtube"
-    },
-    {
-        title: "Aníbal Quijano en el III Congreso Latinoamericano y Caribeño de Ciencias Sociale",
-        url: "https://youtu.be/OxL5KwZGvdY?si=HdDr4b72oVltwte3",
+{
+        title: "O Complexo de Salvador Branco: A Bondade que Destrói",
+        url: "https://youtu.be/lgod0RIGW5w?si=9YvkBmcfQuR1puDR",
         type: "youtube"
     }
- ];
+];
