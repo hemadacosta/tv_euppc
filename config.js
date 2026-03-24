@@ -35,7 +35,7 @@ const schedule = [
     }, 
 {
         title: "Arte Educação | SESC-MT - A colonialidade da arte - Módulo I",
-        url: "https://www.youtube.com/live/ojyLi3cLt9k?si=su8yV6kqpnsE7wYj",
+        url: "https://www.youtube.com/live/ojyLi3cLt9k?si=4d2x75afIEL6z5Qo",
         type: "youtube"
     },
 {
