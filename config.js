@@ -52,5 +52,10 @@ const schedule = [
         title: "O Complexo de Salvador Branco: A Bondade que Destrói",
         url: "https://youtu.be/lgod0RIGW5w?si=9YvkBmcfQuR1puDR",
         type: "youtube"
+    },
+{
+        title: "O Óleo de Lorenzo (1992) - Trailer - Assista ao filme completo na apresentação da 5ª Aula - ECT1(lorenzo's oil)",
+    url: "https://player.vimeo.com/video/646212903?h=17c25e1796",
+    type: "vimeo"
     }
 ];
