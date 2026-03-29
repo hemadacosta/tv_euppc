@@ -20,8 +20,8 @@ const schedule = [
     },
 {
         title: "Timor-Leste, O Massacre que o Mundo Não Viu (2001)",
-        url: "https://drive.google.com/file/d/1YyOVp0v6Rrem8GwyodD2fGsFoVBCuCCj/preview",
-        type: "googledrive"
+        url: "https://www.youtube-nocookie.com/embed/jBx6OMtJ78o?si=pHiUvyb0eqQFt6wF",
+        type: "youtube"
     },
 {
         title: "História de Timor-Leste",
