@@ -20,7 +20,7 @@ const schedule = [
     },
 {
         title: "Timor-Leste, O Massacre que o Mundo Não Viu (2001)",
-        url: "https://www.youtube-nocookie.com/embed/jBx6OMtJ78o?si=pHiUvyb0eqQFt6wF",
+        url: "https://youtu.be/5bBbFiww2Uw?si=LLMIDfC_reFZUQ0Q",
         type: "youtube"
     },
 {
