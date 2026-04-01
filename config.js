@@ -77,5 +77,10 @@ const schedule = [
         title: "O Genocídio Esquecido da Europa no Congo Belga",
         url: "https://youtu.be/8R6Ysku72Po?si=6K94WOO0e6zSLBy2",
         type: "youtube"
-    }
+    },
+ {
+    title: "Darcy Ribeiro",
+    url: "https://player.vimeo.com/video/205497849?h=7871f98a5c",
+    type: "vimeo"
+    }       
 ];
