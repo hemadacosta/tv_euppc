@@ -82,10 +82,5 @@ const schedule = [
     title: "Darcy Ribeiro",
     url: "https://player.vimeo.com/video/205497849?h=7871f98a5c",
     type: "vimeo"
-    },
-        {
-    title: "Roupa dos Brancos Mortos - Têxtil dos países ricos é lixo em países africanos",
-    url: "https://rumble.com/embed/v121yp5/?pub=4",
-    type: "vimeo"
     }
 ];
