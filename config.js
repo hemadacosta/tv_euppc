@@ -85,7 +85,7 @@ const schedule = [
     },
 {
     title: "Roupa dos Brancos Mortos - Têxtil dos países ricos é lixo em países africanos",
-    url: "https://drive.google.com/file/d/1on9YUzXr1N8_b7t1k2ppRpdb1ZP83-RM/preview",
+    url: "https://drive.google.com/file/d/1on9YUzXr1N8_b7t1k2ppRpdb1ZP83-RM/view?usp=sharing",
     type: "googledrive"
     }
 ];
