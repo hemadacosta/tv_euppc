@@ -1,17 +1,16 @@
-// script.js (v8) — navegação confiável (YouTube/Vimeo/Dailymotion/Rumble) + controles discretos
-// SUPORTA: YouTube, Vimeo, Dailymotion (API 2024), Rumble
+// script.js (v9 FINAL) — navegação confiável (YouTube/Vimeo/Dailymotion) + controles discretos
+// SUPORTA: YouTube, Vimeo, Dailymotion
+// NOTA: Rumble não é suportado devido a restrições técnicas do servidor (X-Frame-Options)
 
 let currentIndex = 0;
 let ytPlayer = null;           // instância YT.Player
 let vimeoPlayer = null;        // instância Vimeo.Player
-let dailymotionPlayer = null;  // instância do novo Player Dailymotion
-let rumblePlayer = null;       // referência ao iframe do Rumble
+let dailymotionPlayer = null;  // referência ao iframe do Dailymotion
 let currentType = null;
 let currentVolume = 100;
 let autoplayEnabled = true;
 let manualControl = false;
 let vimeoAPILoaded = false;
-let dailymotionAPILoaded = false;
 
 // ====== Controles de volume ======
 const volumeSlider = document.getElementById('volume-slider');
@@ -29,10 +28,8 @@ function applyVolumeToPlayer() {
       ytPlayer.setVolume(currentVolume);
     } else if (currentType === 'vimeo' && vimeoPlayer && typeof vimeoPlayer.setVolume === 'function') {
       vimeoPlayer.setVolume(currentVolume / 100);
-    } else if (currentType === 'dailymotion' && dailymotionPlayer && typeof dailymotionPlayer.setVolume === 'function') {
-      dailymotionPlayer.setVolume(currentVolume / 100);
     }
-    // Rumble não tem API de volume via JavaScript
+    // Dailymotion iframe não tem controle de volume via API
   } catch (e) {
     console.warn("Falha ao aplicar volume:", e);
   }
@@ -78,7 +75,6 @@ function maybeUnmuteIfUserChangedVolume() {
     if (currentVolume > 0) {
       if (ytPlayer && typeof ytPlayer.unMute === 'function') ytPlayer.unMute();
       if (vimeoPlayer && typeof vimeoPlayer.setMuted === 'function') vimeoPlayer.setMuted(false);
-      if (dailymotionPlayer && typeof dailymotionPlayer.setMuted === 'function') dailymotionPlayer.setMuted(false);
     }
   } catch (_) {}
 }
@@ -183,7 +179,6 @@ function loadVideo(index, fromUser = false) {
     if (u.includes('youtube.com') || u.includes('youtu.be')) type = 'youtube';
     else if (u.includes('vimeo.com')) type = 'vimeo';
     else if (u.includes('dailymotion.com') || u.includes('dai.ly')) type = 'dailymotion';
-    else if (u.includes('rumble.com')) type = 'rumble';
     else if (u.includes('drive.google.com')) type = 'googledrive';
   }
   currentType = type;
@@ -204,9 +199,6 @@ function loadVideo(index, fromUser = false) {
       break;
     case 'dailymotion':
       loadDailymotion(videoData.url, autoplayEnabled);
-      break;
-    case 'rumble':
-      loadRumble(videoData.url, autoplayEnabled);
       break;
     case 'googledrive':
       loadGoogleDrive(videoData.url);
@@ -234,18 +226,8 @@ function clearPlayerContainer() {
     vimeoPlayer = null;
   }
 
-  // Destroi Dailymotion (novo método)
-  if (dailymotionPlayer) {
-    try { 
-      if (typeof dailymotionPlayer.destroy === 'function') {
-        dailymotionPlayer.destroy(); 
-      }
-    } catch (e) { console.warn("Erro ao destruir Dailymotion:", e); }
-    dailymotionPlayer = null;
-  }
-
-  // Limpa Rumble
-  rumblePlayer = null;
+  // Limpa Dailymotion
+  dailymotionPlayer = null;
 
   // Limpa HTML
   container.innerHTML = '';
@@ -304,7 +286,7 @@ function loadYouTube(url, allowAutoplay) {
       }
     }
 
-    if (vimeoPlayer || dailymotionPlayer) clearPlayerContainer();
+    if (vimeoPlayer) clearPlayerContainer();
 
     ytPlayer = new YT.Player('player', {
       height: '100%',
@@ -436,42 +418,7 @@ function loadVimeo(url, allowAutoplay) {
   });
 }
 
-// ====== DAILYMOTION (API 2024 - geo.dailymotion.com) ======
-function loadDailymotionAPI(callback) {
-  if (typeof dailymotion !== 'undefined' && dailymotion.createPlayer) {
-    dailymotionAPILoaded = true;
-    callback();
-    return;
-  }
-
-  if (document.querySelector('script[src*="geo.dailymotion.com/libs/player.js"]')) {
-    const checkInterval = setInterval(() => {
-      if (typeof dailymotion !== 'undefined' && dailymotion.createPlayer) {
-        dailymotionAPILoaded = true;
-        clearInterval(checkInterval);
-        callback();
-      }
-    }, 100);
-    return;
-  }
-
-  console.log("Carregando nova API do Dailymotion...");
-
-  const script = document.createElement('script');
-  script.src = 'https://geo.dailymotion.com/libs/player.js';
-  script.async = true;
-  script.onload = () => {
-    console.log("API do Dailymotion carregada!");
-    dailymotionAPILoaded = true;
-    callback();
-  };
-  script.onerror = () => {
-    console.error("Falha ao carregar API do Dailymotion");
-    updateInfo("Erro", "Não foi possível carregar o player do Dailymotion.");
-  };
-  document.head.appendChild(script);
-}
-
+// ====== DAILYMOTION (Iframe Embed - método mais confiável) ======
 function extractDailymotionID(url) {
   if (!url) return null;
   const u = String(url).trim();
@@ -505,110 +452,39 @@ function loadDailymotion(url, allowAutoplay) {
 
   console.log("Carregando vídeo Dailymotion:", videoId);
 
-  loadDailymotionAPI(() => {
-    clearPlayerContainer();
-
-    const container = document.getElementById('player');
-    const dmDiv = document.createElement('div');
-    dmDiv.id = 'dailymotion-player';
-    container.appendChild(dmDiv);
-
-    // Cria player usando a nova API
-    dailymotion
-      .createPlayer('dailymotion-player', {
-        video: videoId,
-        params: {
-          mute: autoplayMuted,
-          // Autoplay é controlado pelo parametro startTime
-          startTime: 0
-        }
-      })
-      .then((player) => {
-        console.log("Player Dailymotion criado!");
-        dailymotionPlayer = player;
-
-        // Aplica volume
-        applyVolumeToPlayer();
-        maybeUnmuteIfUserChangedVolume();
-
-        // Se não permitir autoplay, pausa imediatamente
-        if (!allowAutoplay) {
-          player.pause();
-        }
-
-        // Evento: vídeo terminou
-        player.on(dailymotion.events.VIDEO_END, () => {
-          console.log("Dailymotion: vídeo terminou");
-          setTimeout(() => {
-            manualControl = false;
-            playNext(true);
-          }, 800);
-        });
-
-        // Evento: erro
-        player.on(dailymotion.events.PLAYER_ERROR, (error) => {
-          console.error("Erro no Dailymotion:", error);
-          updateInfo("Erro no Dailymotion", "Não foi possível reproduzir o vídeo");
-        });
-
-        // Evento: pronto para reproduzir
-        player.on(dailymotion.events.VIDEO_PLAY, () => {
-          console.log("Dailymotion: reproduzindo");
-        });
-      })
-      .catch((error) => {
-        console.error("Falha ao criar player Dailymotion:", error);
-        updateInfo("Erro no Dailymotion", "Falha ao inicializar player");
-      });
-  });
-}
-
-// ====== RUMBLE ======
-function extractRumbleID(url) {
-  if (!url) return null;
-  const u = String(url).trim();
-  // Formatos: rumble.com/v123abc-nome-do-video.html
-  const m = u.match(/rumble\.com\/(v[a-zA-Z0-9]+)/);
-  return m ? m[1] : null;
-}
-
-function loadRumble(url, allowAutoplay) {
-  const videoId = extractRumbleID(url);
-  if (!videoId) {
-    console.error("ID Rumble não encontrado:", url);
-    updateInfo("Erro no Rumble", "Não encontrei o ID do vídeo.");
-    return;
-  }
-
   clearPlayerContainer();
 
   const container = document.getElementById('player');
 
-  // Rumble usa iframe embed
-  // Autoplay: adiciona ?autoplay=2 (2 = autoplay com som, 1 = muted)
-  const autoplayParam = allowAutoplay ? '?autoplay=2' : '';
-  const embedUrl = `https://rumble.com/embed/${videoId}/${autoplayParam}`;
+  // Usa iframe embed direto - método mais confiável
+  // Autoplay: 1 = sim, 0 = não
+  const autoplayParam = allowAutoplay ? 'autoplay=1' : 'autoplay=0';
+  const muteParam = autoplayMuted ? 'mute=1' : 'mute=0';
+  const embedUrl = `https://www.dailymotion.com/embed/video/${videoId}?${autoplayParam}&${muteParam}&controls=1&ui-logo=0&sharing-enable=0`;
 
   container.innerHTML = `
     <iframe 
-      id="rumble-player"
+      id="dailymotion-player"
       src="${embedUrl}" 
       width="100%" 
       height="100%"
       frameborder="0" 
       allowfullscreen
-      allow="autoplay; encrypted-media"
-      style="border: none; width: 100%; height: 100%;"
+      allow="autoplay; fullscreen; picture-in-picture"
+      style="border: none; width: 100%; height: 100%; position: absolute; top: 0; left: 0;"
     ></iframe>
   `;
 
-  rumblePlayer = document.getElementById('rumble-player');
+  dailymotionPlayer = document.getElementById('dailymotion-player');
 
-  // Rumble não tem API JavaScript oficial para detectar "ended"
+  // Dailymotion iframe não tem API JavaScript para detectar "ended"
+  // O usuário precisará usar os botões Próximo/Anterior
   updateInfo(
     document.getElementById('video-title')?.innerText || "Vídeo",
-    "Rumble: reproduzindo (use os botões para navegar)"
+    "Dailymotion: reproduzindo (use os botões para navegar)"
   );
+
+  console.log("Dailymotion embed carregado:", embedUrl);
 }
 
 // ====== GOOGLE DRIVE ======
