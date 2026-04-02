@@ -1,10 +1,10 @@
-// script.js (v7) — navegação confiável (YouTube/Vimeo/Dailymotion/Rumble) + controles discretos
-// SUPORTA: YouTube, Vimeo, Dailymotion, Rumble
+// script.js (v8) — navegação confiável (YouTube/Vimeo/Dailymotion/Rumble) + controles discretos
+// SUPORTA: YouTube, Vimeo, Dailymotion (API 2024), Rumble
 
 let currentIndex = 0;
 let ytPlayer = null;           // instância YT.Player
 let vimeoPlayer = null;        // instância Vimeo.Player
-let dailymotionPlayer = null;  // instância DM.player
+let dailymotionPlayer = null;  // instância do novo Player Dailymotion
 let rumblePlayer = null;       // referência ao iframe do Rumble
 let currentType = null;
 let currentVolume = 100;
@@ -234,9 +234,13 @@ function clearPlayerContainer() {
     vimeoPlayer = null;
   }
 
-  // Destroi Dailymotion
+  // Destroi Dailymotion (novo método)
   if (dailymotionPlayer) {
-    try { dailymotionPlayer.destroy(); } catch (e) { console.warn("Erro ao destruir Dailymotion:", e); }
+    try { 
+      if (typeof dailymotionPlayer.destroy === 'function') {
+        dailymotionPlayer.destroy(); 
+      }
+    } catch (e) { console.warn("Erro ao destruir Dailymotion:", e); }
     dailymotionPlayer = null;
   }
 
@@ -432,17 +436,17 @@ function loadVimeo(url, allowAutoplay) {
   });
 }
 
-// ====== DAILYMOTION ======
+// ====== DAILYMOTION (API 2024 - geo.dailymotion.com) ======
 function loadDailymotionAPI(callback) {
-  if (typeof DM !== 'undefined' && DM.player) {
+  if (typeof dailymotion !== 'undefined' && dailymotion.createPlayer) {
     dailymotionAPILoaded = true;
     callback();
     return;
   }
 
-  if (document.querySelector('script[src*="api.dmcdn.net/all.js"]')) {
+  if (document.querySelector('script[src*="geo.dailymotion.com/libs/player.js"]')) {
     const checkInterval = setInterval(() => {
-      if (typeof DM !== 'undefined' && DM.player) {
+      if (typeof dailymotion !== 'undefined' && dailymotion.createPlayer) {
         dailymotionAPILoaded = true;
         clearInterval(checkInterval);
         callback();
@@ -451,17 +455,18 @@ function loadDailymotionAPI(callback) {
     return;
   }
 
+  console.log("Carregando nova API do Dailymotion...");
+
   const script = document.createElement('script');
-  script.src = 'https://api.dmcdn.net/all.js';
+  script.src = 'https://geo.dailymotion.com/libs/player.js';
   script.async = true;
   script.onload = () => {
+    console.log("API do Dailymotion carregada!");
     dailymotionAPILoaded = true;
-    if (typeof DM !== 'undefined' && DM.init) {
-      DM.init({ apiKey: '', status: false, cookie: true });
-    }
     callback();
   };
   script.onerror = () => {
+    console.error("Falha ao carregar API do Dailymotion");
     updateInfo("Erro", "Não foi possível carregar o player do Dailymotion.");
   };
   document.head.appendChild(script);
@@ -470,18 +475,35 @@ function loadDailymotionAPI(callback) {
 function extractDailymotionID(url) {
   if (!url) return null;
   const u = String(url).trim();
-  // Formatos: dailymotion.com/video/x123abc ou dai.ly/x123abc
-  const m = u.match(/(?:dailymotion\.com\/video\/|dai\.ly\/)([a-zA-Z0-9]+)/);
-  return m ? m[1] : null;
+
+  // Formatos suportados:
+  // https://www.dailymotion.com/video/x8u8f44
+  // https://dai.ly/x8u8f44
+  // https://geo.dailymotion.com/player.html?video=x8u8f44
+
+  const patterns = [
+    /dailymotion\.com\/video\/([a-zA-Z0-9]+)/,
+    /dai\.ly\/([a-zA-Z0-9]+)/,
+    /geo\.dailymotion\.com\/player\.html\?video=([a-zA-Z0-9]+)/
+  ];
+
+  for (const pattern of patterns) {
+    const m = u.match(pattern);
+    if (m) return m[1];
+  }
+
+  return null;
 }
 
 function loadDailymotion(url, allowAutoplay) {
   const videoId = extractDailymotionID(url);
   if (!videoId) {
     console.error("ID Dailymotion não encontrado:", url);
-    updateInfo("Erro no Dailymotion", "Não encontrei o ID do vídeo.");
+    updateInfo("Erro no Dailymotion", "Não encontrei o ID do vídeo. Verifique a URL.");
     return;
   }
+
+  console.log("Carregando vídeo Dailymotion:", videoId);
 
   loadDailymotionAPI(() => {
     clearPlayerContainer();
@@ -491,38 +513,53 @@ function loadDailymotion(url, allowAutoplay) {
     dmDiv.id = 'dailymotion-player';
     container.appendChild(dmDiv);
 
-    dailymotionPlayer = DM.player(dmDiv, {
-      video: videoId,
-      width: '100%',
-      height: '100%',
-      params: {
-        autoplay: allowAutoplay ? 1 : 0,
-        mute: autoplayMuted ? 1 : 0,
-        controls: 1,
-        'sharing-enable': 0,
-        'ui-logo': 0
-      }
-    });
+    // Cria player usando a nova API
+    dailymotion
+      .createPlayer('dailymotion-player', {
+        video: videoId,
+        params: {
+          mute: autoplayMuted,
+          // Autoplay é controlado pelo parametro startTime
+          startTime: 0
+        }
+      })
+      .then((player) => {
+        console.log("Player Dailymotion criado!");
+        dailymotionPlayer = player;
 
-    // Evento quando termina
-    dailymotionPlayer.addEventListener('ended', () => {
-      setTimeout(() => {
-        manualControl = false;
-        playNext(true);
-      }, 800);
-    });
+        // Aplica volume
+        applyVolumeToPlayer();
+        maybeUnmuteIfUserChangedVolume();
 
-    // Evento de erro
-    dailymotionPlayer.addEventListener('error', () => {
-      console.error("Erro no Dailymotion");
-      updateInfo("Erro no Dailymotion", "Não foi possível reproduzir o vídeo");
-    });
+        // Se não permitir autoplay, pausa imediatamente
+        if (!allowAutoplay) {
+          player.pause();
+        }
 
-    // Aplica volume quando pronto
-    dailymotionPlayer.addEventListener('playing', () => {
-      applyVolumeToPlayer();
-      maybeUnmuteIfUserChangedVolume();
-    });
+        // Evento: vídeo terminou
+        player.on(dailymotion.events.VIDEO_END, () => {
+          console.log("Dailymotion: vídeo terminou");
+          setTimeout(() => {
+            manualControl = false;
+            playNext(true);
+          }, 800);
+        });
+
+        // Evento: erro
+        player.on(dailymotion.events.PLAYER_ERROR, (error) => {
+          console.error("Erro no Dailymotion:", error);
+          updateInfo("Erro no Dailymotion", "Não foi possível reproduzir o vídeo");
+        });
+
+        // Evento: pronto para reproduzir
+        player.on(dailymotion.events.VIDEO_PLAY, () => {
+          console.log("Dailymotion: reproduzindo");
+        });
+      })
+      .catch((error) => {
+        console.error("Falha ao criar player Dailymotion:", error);
+        updateInfo("Erro no Dailymotion", "Falha ao inicializar player");
+      });
   });
 }
 
@@ -568,14 +605,10 @@ function loadRumble(url, allowAutoplay) {
   rumblePlayer = document.getElementById('rumble-player');
 
   // Rumble não tem API JavaScript oficial para detectar "ended"
-  // Usamos uma estimativa de tempo como fallback
   updateInfo(
     document.getElementById('video-title')?.innerText || "Vídeo",
-    "Rumble: reproduzindo (navegação automática após término pode variar)"
+    "Rumble: reproduzindo (use os botões para navegar)"
   );
-
-  // Para Rumble, não temos como detectar quando termina automaticamente
-  // O usuário precisará usar os botões Próximo/Anterior
 }
 
 // ====== GOOGLE DRIVE ======
