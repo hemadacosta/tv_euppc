@@ -85,8 +85,8 @@ const schedule = [
     },
 {
     title: "A Roupa dos Brancos Mortos",
-    url: "https://geo.dailymotion.com/player.html?video=x8u8f44",
+    url: "https://rumble.com/v14o4nh-roupa-dos-brancos-mortos-txtil-dos-pases-ricos-lixo-em-pases-africanos-gran.html",
     // ou: url: "https://dai.ly/x123abc"
-    type: "dailymotion"
+    type: "rumble"
   }
 ];
