@@ -25,9 +25,14 @@ const schedule = [
     },
 {
         title: "Timor-Leste, O Massacre que o Mundo Não Viu (2001)",
-        url: "https://youtu.be/jBx6OMtJ78o?si=fr4Qq4j-qNb7SEYN",
+        url: "https://youtu.be/5bBbFiww2Uw?si=u1qR7D3O3mJtxTOj",
         type: "youtube"
     },
+     {     
+        title: "TV EUPPC",
+        url: "https://youtu.be/FQKYXbr5rHo?si=LG89ea4FYvbR0pn6",
+        type: "youtube"
+      },
 {
         title: "História de Timor-Leste",
         url: "https://youtu.be/fD6Clm6teME?si=ASZyvHN0KJgsBk7M",
@@ -47,7 +52,12 @@ const schedule = [
         title: "Arte Educação, SESC-MT - A colonialidade da arte - Módulo II",
         url: "https://www.youtube.com/embed/SBYwguIUY5s?si=Y18z_c97D0-YqNK7",
         type: "youtube"
-    }, 
+    },
+ {     
+        title: "TV EUPPC",
+        url: "https://youtu.be/FQKYXbr5rHo?si=LG89ea4FYvbR0pn6",
+        type: "youtube"
+      },
 {
         title: "O Povo Brasileiro de Darcy Ribeiro - Matriz Afro (parte 3)",
         url: "https://youtu.be/vwj1GBEYr_s?si=pKYjllprMlagd2dh",
@@ -68,6 +78,11 @@ const schedule = [
         url: "https://youtu.be/42Gl7uoU7hc?si=4punW5qiVbu9_nJf",
         type: "youtube"
     },
+{     
+        title: "TV EUPPC",
+        url: "https://youtu.be/FQKYXbr5rHo?si=LG89ea4FYvbR0pn6",
+        type: "youtube"
+      },
 {
         title: "O Complexo de Salvador Branco, A Bondade que Destrói",
         url: "https://youtu.be/lgod0RIGW5w?si=9YvkBmcfQuR1puDR",
