@@ -9,6 +9,11 @@ const schedule = [
         type: "youtube"
     },
 {
+        title: "TV EUPPC",
+        url: "https://youtu.be/FQKYXbr5rHo?si=zsYXKH1NxIVhvgIi"
+        type: "youtube"
+    },
+{
         title: "6ª Aula - EUPPC  - Diferenças no processo educacional colonial a partir da catequese operadas por diferentes ordens religiosas",
         url: "https://youtu.be/2w0IWQP2WLA?si=AmluB6s5wr3bajN9",
         type: "youtube"
@@ -16,6 +21,11 @@ const schedule = [
 {
         title: "Anna de o Rei (1999), Trailer (Assista ao filme completo na apresentação da 5ª Aula - EUPPC",
         url: "https://youtu.be/I6cF4_502aw?si=NWE5szdtOKzpi10p",
+        type: "youtube"
+    },
+{
+        title: "TV EUPPC",
+        url: "https://youtu.be/FQKYXbr5rHo?si=zsYXKH1NxIVhvgIi"
         type: "youtube"
     },
 {
@@ -37,7 +47,12 @@ const schedule = [
         title: "Brasil e Timor-Leste - 20 anos de amizade e cooperação",
         url: "https://youtu.be/MT6OVyXcU-c?si=G9A7cYt5Eef8JMfT",
         type: "youtube"
-    }, 
+    },
+{
+        title: "TV EUPPC",
+        url: "https://youtu.be/FQKYXbr5rHo?si=zsYXKH1NxIVhvgIi"
+        type: "youtube"
+    },
 {
         title: "Arte Educação, SESC-MT - A colonialidade da arte - Módulo II",
         url: "https://www.youtube.com/embed/SBYwguIUY5s?si=Y18z_c97D0-YqNK7",
@@ -61,6 +76,11 @@ const schedule = [
 {
         title: "O Complexo de Salvador Branco, A Bondade que Destrói",
         url: "https://youtu.be/lgod0RIGW5w?si=9YvkBmcfQuR1puDR",
+        type: "youtube"
+    },
+{
+        title: "TV EUPPC",
+        url: "https://youtu.be/FQKYXbr5rHo?si=zsYXKH1NxIVhvgIi"
         type: "youtube"
     },
 {
@@ -88,4 +108,9 @@ const schedule = [
     url: "https://geo.dailymotion.com/player.html?video=x8u8f44",
     type: "dailymotion"
   }
+{
+        title: "TV EUPPC",
+        url: "https://youtu.be/FQKYXbr5rHo?si=zsYXKH1NxIVhvgIi"
+        type: "youtube"
+    }
 ];
