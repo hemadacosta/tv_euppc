@@ -8,6 +8,11 @@ const schedule = [
         url: "https://youtu.be/ocKkkbSAl4g?si=sDDTCXTo2wLSgJsM",
         type: "youtube"
     },
+{     
+        title: "TV EUPPC",
+        url: "https://youtu.be/FQKYXbr5rHo?si=LG89ea4FYvbR0pn6",
+        type: "youtube"
+      },
 {
         title: "6ª Aula - EUPPC  - Diferenças no processo educacional colonial a partir da catequese operadas por diferentes ordens religiosas",
         url: "https://youtu.be/2w0IWQP2WLA?si=AmluB6s5wr3bajN9",
