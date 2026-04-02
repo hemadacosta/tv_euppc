@@ -19,10 +19,10 @@ const schedule = [
         type: "youtube"
     },
 {
-        title: "Anna de o Rei (1999), Trailer (Assista ao filme completo na apresentação da 5ª Aula - EUPPC",
-        url: "https://youtu.be/I6cF4_502aw?si=NWE5szdtOKzpi10p",
-        type: "youtube"
-    },
+    title: '🎬 <a href="https://drive.google.com/file/d/1GbVr5RNUtdojCl2-Wnm8cov5zhBrNzmR/preview" target="_blank" style="color: #4CAF50; font-weight: bold;">Ver Filme Completo</a> | Anna e o Rei (1999) - Trailer',
+    url: "https://youtu.be/I6cF4_502aw?si=NWE5szdtOKzpi10p",
+    type: "youtube"
+},
 {
         title: "Timor-Leste, O Massacre que o Mundo Não Viu (2001)",
         url: "https://youtu.be/5bBbFiww2Uw?si=u1qR7D3O3mJtxTOj",
