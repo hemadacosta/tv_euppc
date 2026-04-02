@@ -32,15 +32,14 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
-/* CORREÇÃO: Força todos os players a preencher todo o container */
+/* Players - YouTube, Vimeo, Dailymotion */
 #vimeo-player,
 #vimeo-player iframe,
 #dailymotion-player,
 #dailymotion-player iframe,
-#rumble-player,
-#rumble-player iframe,
 #player iframe {
     width: 100% !important;
     height: 100% !important;
@@ -57,19 +56,6 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-/* Dailymotion specific - força preenchimento */
-#dailymotion-player {
-    width: 100% !important;
-    height: 100% !important;
-}
-
-/* Rumble specific */
-#rumble-player {
-    width: 100% !important;
-    height: 100% !important;
-    border: none;
 }
 
 #info-bar {
@@ -176,7 +162,7 @@ iframe {
     display: block;
 }
 
-/* v7 — controles discretos + suporte a múltiplas plataformas */
+/* v9 — controles discretos + suporte a múltiplas plataformas */
 #nav-controls {
   position: absolute;
   top: 12px;
