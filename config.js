@@ -82,11 +82,5 @@ const schedule = [
     title: "Darcy Ribeiro",
     url: "https://player.vimeo.com/video/205497849?h=7871f98a5c",
     type: "vimeo"
-    },
-{
-    title: "A Roupa dos Brancos Mortos",
-    url: "https://dai.ly/x8u8f44",
-    // ou: url: "https://dai.ly/x123abc"
-    type: "dailymotion"
-  }
+    }
 ];
