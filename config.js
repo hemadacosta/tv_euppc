@@ -85,7 +85,7 @@ const schedule = [
     },
 {
     title: "A Roupa dos Brancos Mortos",
-    url: "https://geo.dailymotion.com/player.html?video=x8u8f44",
+    url: "https://dai.ly/x8u8f44",
     // ou: url: "https://dai.ly/x123abc"
     type: "dailymotion"
   }
