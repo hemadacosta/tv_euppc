@@ -85,8 +85,8 @@ const schedule = [
     },
 {
     title: "A Roupa dos Brancos Mortos",
-    url: "https://rumble.com/embed/v121yp5/",
+    url: "https://dai.ly/x8u8f44",
     // ou: url: "https://dai.ly/x123abc"
-    type: "rumble"
+    type: "dailymotion"
   }
 ];
