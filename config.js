@@ -54,6 +54,11 @@ const schedule = [
         type: "youtube"
     },
 {
+        title: "Darcy Ribeiro", //35:21
+        url: "https://player.vimeo.com/video/205497849?h=7871f98a5c",
+        type: "vimeo"
+    },
+{
         title: "Colonização das Filipinas e imperialismo americano no Sudeste Asiático",
         url: "https://youtu.be/5yKO0mHhHXk?si=VIv61FK-ig098AMq",
         type: "youtube"
