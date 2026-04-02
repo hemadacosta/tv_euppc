@@ -107,7 +107,7 @@ const schedule = [
     title: "A Roupa dos Brancos Mortos",
     url: "https://geo.dailymotion.com/player.html?video=x8u8f44",
     type: "dailymotion"
-  }
+  },
 {
         title: "TV EUPPC",
         url: "https://youtu.be/FQKYXbr5rHo?si=zsYXKH1NxIVhvgIi"
