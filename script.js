@@ -1,11 +1,11 @@
-// script.js (v9 FINAL) — navegação confiável (YouTube/Vimeo/Dailymotion) + controles discretos
+// script.js (v10) — navegação confiável (YouTube/Vimeo/Dailymotion) + HTML no título
 // SUPORTA: YouTube, Vimeo, Dailymotion
-// NOTA: Rumble não é suportado devido a restrições técnicas do servidor (X-Frame-Options)
+// NOVO: Suporte a HTML no title (links, formatação, etc.)
 
 let currentIndex = 0;
-let ytPlayer = null;           // instância YT.Player
-let vimeoPlayer = null;        // instância Vimeo.Player
-let dailymotionPlayer = null;  // referência ao iframe do Dailymotion
+let ytPlayer = null;
+let vimeoPlayer = null;
+let dailymotionPlayer = null;
 let currentType = null;
 let currentVolume = 100;
 let autoplayEnabled = true;
@@ -29,7 +29,6 @@ function applyVolumeToPlayer() {
     } else if (currentType === 'vimeo' && vimeoPlayer && typeof vimeoPlayer.setVolume === 'function') {
       vimeoPlayer.setVolume(currentVolume / 100);
     }
-    // Dailymotion iframe não tem controle de volume via API
   } catch (e) {
     console.warn("Falha ao aplicar volume:", e);
   }
@@ -85,10 +84,21 @@ function safeSchedule() {
   return schedule;
 }
 
+// NOVO: Atualiza info com suporte a HTML no título
 function updateInfo(title, status) {
   const t = document.getElementById('video-title');
   const s = document.getElementById('status-text');
-  if (t) t.innerText = title || '';
+
+  // Se o título contiver HTML (tags < >), usa innerHTML
+  // Caso contrário, usa innerText para segurança
+  if (t) {
+    if (title && (title.includes('<') && title.includes('>'))) {
+      t.innerHTML = title;
+    } else {
+      t.innerText = title || '';
+    }
+  }
+
   if (s) s.innerText = status || '';
 }
 
@@ -214,22 +224,17 @@ function clearPlayerContainer() {
   const container = document.getElementById('player');
   if (!container) return;
 
-  // Destroi YouTube
   if (ytPlayer) {
     try { ytPlayer.destroy(); } catch (e) { console.warn("Erro ao destruir YouTube:", e); }
     ytPlayer = null;
   }
 
-  // Destroi Vimeo
   if (vimeoPlayer) {
     try { vimeoPlayer.destroy(); } catch (e) { console.warn("Erro ao destruir Vimeo:", e); }
     vimeoPlayer = null;
   }
 
-  // Limpa Dailymotion
   dailymotionPlayer = null;
-
-  // Limpa HTML
   container.innerHTML = '';
 }
 
@@ -418,15 +423,10 @@ function loadVimeo(url, allowAutoplay) {
   });
 }
 
-// ====== DAILYMOTION (Iframe Embed - método mais confiável) ======
+// ====== DAILYMOTION (Iframe Embed) ======
 function extractDailymotionID(url) {
   if (!url) return null;
   const u = String(url).trim();
-
-  // Formatos suportados:
-  // https://www.dailymotion.com/video/x8u8f44
-  // https://dai.ly/x8u8f44
-  // https://geo.dailymotion.com/player.html?video=x8u8f44
 
   const patterns = [
     /dailymotion\.com\/video\/([a-zA-Z0-9]+)/,
@@ -456,8 +456,6 @@ function loadDailymotion(url, allowAutoplay) {
 
   const container = document.getElementById('player');
 
-  // Usa iframe embed direto - método mais confiável
-  // Autoplay: 1 = sim, 0 = não
   const autoplayParam = allowAutoplay ? 'autoplay=1' : 'autoplay=0';
   const muteParam = autoplayMuted ? 'mute=1' : 'mute=0';
   const embedUrl = `https://www.dailymotion.com/embed/video/${videoId}?${autoplayParam}&${muteParam}&controls=1&ui-logo=0&sharing-enable=0`;
@@ -477,8 +475,6 @@ function loadDailymotion(url, allowAutoplay) {
 
   dailymotionPlayer = document.getElementById('dailymotion-player');
 
-  // Dailymotion iframe não tem API JavaScript para detectar "ended"
-  // O usuário precisará usar os botões Próximo/Anterior
   updateInfo(
     document.getElementById('video-title')?.innerText || "Vídeo",
     "Dailymotion: reproduzindo (use os botões para navegar)"
