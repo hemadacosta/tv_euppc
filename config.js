@@ -9,11 +9,6 @@ const schedule = [
         type: "youtube"
     },
 {
-        title: "TV EUPPC",
-        url: "https://youtu.be/FQKYXbr5rHo?si=zsYXKH1NxIVhvgIi"
-        type: "youtube"
-    },
-{
         title: "6ª Aula - EUPPC  - Diferenças no processo educacional colonial a partir da catequese operadas por diferentes ordens religiosas",
         url: "https://youtu.be/2w0IWQP2WLA?si=AmluB6s5wr3bajN9",
         type: "youtube"
@@ -24,13 +19,8 @@ const schedule = [
         type: "youtube"
     },
 {
-        title: "TV EUPPC",
-        url: "https://youtu.be/FQKYXbr5rHo?si=zsYXKH1NxIVhvgIi"
-        type: "youtube"
-    },
-{
         title: "Timor-Leste, O Massacre que o Mundo Não Viu (2001)",
-        url: "https://youtu.be/5bBbFiww2Uw?si=LLMIDfC_reFZUQ0Q",
+        url: "https://youtu.be/jBx6OMtJ78o?si=fr4Qq4j-qNb7SEYN",
         type: "youtube"
     },
 {
@@ -47,17 +37,12 @@ const schedule = [
         title: "Brasil e Timor-Leste - 20 anos de amizade e cooperação",
         url: "https://youtu.be/MT6OVyXcU-c?si=G9A7cYt5Eef8JMfT",
         type: "youtube"
-    },
-{
-        title: "TV EUPPC",
-        url: "https://youtu.be/FQKYXbr5rHo?si=zsYXKH1NxIVhvgIi"
-        type: "youtube"
-    },
+    }, 
 {
         title: "Arte Educação, SESC-MT - A colonialidade da arte - Módulo II",
         url: "https://www.youtube.com/embed/SBYwguIUY5s?si=Y18z_c97D0-YqNK7",
         type: "youtube"
-    },
+    }, 
 {
         title: "O Povo Brasileiro de Darcy Ribeiro - Matriz Afro (parte 3)",
         url: "https://youtu.be/vwj1GBEYr_s?si=pKYjllprMlagd2dh",
@@ -79,11 +64,6 @@ const schedule = [
         type: "youtube"
     },
 {
-        title: "TV EUPPC",
-        url: "https://youtu.be/FQKYXbr5rHo?si=zsYXKH1NxIVhvgIi"
-        type: "youtube"
-    },
-{
         title: "O Massacre Alemão na Namíbia, O primeiro Genocídio do Século XX",
         url: "https://youtu.be/-J5gJrW1epI?si=HBma-PmkoiZu9bRk",
         type: "youtube"
@@ -97,11 +77,6 @@ const schedule = [
         title: "O Genocídio Esquecido da Europa no Congo Belga",
         url: "https://youtu.be/8R6Ysku72Po?si=6K94WOO0e6zSLBy2",
         type: "youtube"
-    },
- {
-    title: "Darcy Ribeiro",
-    url: "https://player.vimeo.com/video/205497849?h=7871f98a5c",
-    type: "vimeo"
     },
 {
     title: "A Roupa dos Brancos Mortos",
