@@ -85,7 +85,7 @@ const schedule = [
     },
 {
     title: "A Roupa dos Brancos Mortos",
-    url: "https://rumble.com/v14o4nh-roupa-dos-brancos-mortos-txtil-dos-pases-ricos-lixo-em-pases-africanos-gran.html",
+    url: "https://rumble.com/embed/v121yp5/?pub=4",
     // ou: url: "https://dai.ly/x123abc"
     type: "rumble"
   }
