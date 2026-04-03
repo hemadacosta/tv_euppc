@@ -7,6 +7,7 @@ body, html {
     color: #fff;
     font-family: Arial, sans-serif;
     overflow: hidden;
+    touch-action: manipulation;
 }
 
 #tv-container {
@@ -24,6 +25,7 @@ body, html {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    touch-action: pan-y;
 }
 
 #player {
@@ -35,7 +37,7 @@ body, html {
     position: relative;
 }
 
-/* Players - YouTube, Vimeo, Dailymotion */
+/* Players */
 #vimeo-player,
 #vimeo-player iframe,
 #dailymotion-player,
@@ -49,7 +51,6 @@ body, html {
     border: none;
 }
 
-/* Container dos players */
 #player > div {
     width: 100%;
     height: 100%;
@@ -65,15 +66,18 @@ body, html {
     align-items: center;
     padding: 0 20px;
     border-top: 2px solid #333;
+    z-index: 100;
 }
 
 #video-title {
     font-size: 1.2rem;
     margin: 0;
     flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
-/* NOVO: Estilos para links no título */
 #video-title a {
     color: #4CAF50;
     text-decoration: underline;
@@ -88,6 +92,7 @@ body, html {
 #status-text {
     font-size: 0.9rem;
     color: #888;
+    white-space: nowrap;
 }
 
 /* Controle de Volume */
@@ -100,6 +105,7 @@ body, html {
     gap: 15px;
     padding: 0 20px;
     border-top: 1px solid #444;
+    z-index: 100;
 }
 
 #volume-control label {
@@ -154,27 +160,7 @@ body, html {
     text-align: center;
 }
 
-/* Controles de Navegação */
-#video-wrapper:hover #nav-controls button {
-    opacity: 1;
-}
-
-#nav-controls button:hover {
-    background-color: rgba(76, 175, 80, 0.9);
-    border-color: #4CAF50;
-    transform: scale(1.1);
-}
-
-#nav-controls button:active {
-    transform: scale(0.95);
-}
-
-iframe {
-    border: none;
-    display: block;
-}
-
-/* v10 — controles discretos + suporte a HTML no título */
+/* ========== CONTROLES DE NAVEGAÇÃO ========== */
 #nav-controls {
   position: absolute;
   top: 12px;
@@ -186,39 +172,114 @@ iframe {
   z-index: 9999;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.3s ease;
 }
 
-/* Mostra em hover (desktop) */
-#video-wrapper:hover #nav-controls,
-#video-wrapper:focus-within #nav-controls {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* Mostra temporariamente em touch quando JS adiciona .show */
+/* Classe show - controlada pelo JavaScript */
 #nav-controls.show {
   opacity: 1;
   pointer-events: auto;
 }
 
+/* Botões de navegação */
 #nav-controls button {
   font-size: clamp(12px, 2.2vw, 16px);
-  padding: 8px 10px;
+  padding: 12px 16px;
   border-radius: 10px;
   border: none;
-  background: rgba(0,0,0,0.55);
+  background: rgba(0,0,0,0.7);
   color: #fff;
   cursor: pointer;
   max-width: 48%;
   white-space: nowrap;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  min-height: 44px;
+  transition: transform 0.15s, background-color 0.3s;
 }
 
 #nav-controls button:active {
-  transform: scale(0.98);
+  transform: scale(0.95);
+  background: rgba(76, 175, 80, 0.9);
 }
 
-/* garante que o player fique abaixo dos botões */
+/* ========== DESKTOP: HOVER ========== */
+@media (pointer: fine) {
+  /* Desktop: hover mostra controles */
+  #video-wrapper:hover #nav-controls,
+  #video-wrapper:focus-within #nav-controls {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  #nav-controls button:hover {
+    background-color: rgba(76, 175, 80, 0.8);
+  }
+}
+
+/* ========== MOBILE/TOUCH: TOQUE ========== */
+@media (pointer: coarse) {
+  /* Mobile: controles começam escondidos */
+  #nav-controls {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* Quanto tem classe show (via JS) */
+  #nav-controls.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Botões maiores para touch */
+  #nav-controls button {
+    padding: 14px 20px;
+    font-size: clamp(14px, 4vw, 18px);
+    min-height: 48px;
+    background: rgba(0,0,0,0.85);
+    border: 2px solid rgba(255,255,255,0.2);
+  }
+}
+
+/* ========== RESPONSIVO GERAL ========== */
+@media (max-width: 768px) {
+  #info-bar {
+    height: auto;
+    min-height: 50px;
+    padding: 8px 12px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #video-title {
+    font-size: 1rem;
+    white-space: normal;
+    line-height: 1.3;
+  }
+
+  #status-text {
+    font-size: 0.8rem;
+    margin-top: 4px;
+  }
+
+  #volume-control {
+    height: auto;
+    min-height: 44px;
+    padding: 8px 12px;
+    gap: 10px;
+  }
+
+  #volume-slider {
+    width: 150px;
+  }
+}
+
+/* Previne scroll indesejado */
+body {
+  overscroll-behavior: none;
+}
+
 #player, #video-wrapper iframe {
   position: relative;
   z-index: 1;
