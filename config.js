@@ -4,8 +4,8 @@
 
 const schedule = [
 {
-        title: "5ª Aula - EUPPC - Reflexões sobre o documentário Schooling the World",
-        url: "https://youtu.be/ocKkkbSAl4g?si=sDDTCXTo2wLSgJsM",
+        title: "7ª Aula - EUPPC - O Casamento entre ciência e império", //42:23
+        url: "https://youtu.be/6nsz0OzbsAQ",
         type: "youtube"
     },
 {     
@@ -14,18 +14,18 @@ const schedule = [
         type: "youtube"
       },
 {
-        title: "6ª Aula - EUPPC  - Diferenças no processo educacional colonial a partir da catequese operadas por diferentes ordens religiosas",
-        url: "https://youtu.be/2w0IWQP2WLA?si=AmluB6s5wr3bajN9",
+        title: "8ª Aula - EUPPC  - Etnografia e Observação Participante, um método de pesquisa social originada na estrutura colonial imperialista", //1:02:02
+        url: "https://youtu.be/Xgj7YxQRwW4",
         type: "youtube"
     },
 {
-    title: '🎬 <a href="https://drive.google.com/file/d/1GbVr5RNUtdojCl2-Wnm8cov5zhBrNzmR/preview" target="_blank" style="color: #4CAF50; font-weight: bold;">Ver Filme Completo</a> | Anna e o Rei (1999) - Trailer',
-    url: "https://youtu.be/I6cF4_502aw?si=NWE5szdtOKzpi10p",
-    type: "youtube"
+        tle: "TV EUPPC",
+        url: "https://youtu.be/FQKYXbr5rHo?si=LG89ea4FYvbR0pn6",
+        type: "youtube"
 },
 {
-        title: "Timor-Leste, O Massacre que o Mundo Não Viu (2001)",
-        url: "https://youtu.be/5bBbFiww2Uw?si=u1qR7D3O3mJtxTOj",
+        title: "O Homem que Viu o Infinito (The Man Who Knew Infinity, 2015)", //1:48:35
+        url: "https://youtu.be/3Istn6lAnJY?si=t0HnAwpbNa2EvcBT",
         type: "youtube"
     },
      {     
@@ -34,8 +34,8 @@ const schedule = [
         type: "youtube"
       },
 {
-        title: "História de Timor-Leste",
-        url: "https://youtu.be/fD6Clm6teME?si=ASZyvHN0KJgsBk7M",
+        title: "Estranhos no Exterior - Fora da varanda (Strangers Abroad - Bronislaw Malinowski)", //53:19
+        url: "https://youtu.be/Qn_gLroH3bQ?si=pkiIzQ3zuJKLUIM0",
         type: "youtube"
     },
 {
@@ -49,8 +49,8 @@ const schedule = [
         type: "youtube"
     }, 
 {
-        title: "Arte Educação, SESC-MT - A colonialidade da arte - Módulo II",
-        url: "https://www.youtube.com/embed/SBYwguIUY5s?si=Y18z_c97D0-YqNK7",
+        title: "Estranhos no Exterior - As Correntes da Tradição (Franz Boas)", //54:33
+        url: "https://youtu.be/zK5lYPeAbDM?si=PXBHZtAOezBj4TO5",
         type: "youtube"
     },
  {     
@@ -59,23 +59,23 @@ const schedule = [
         type: "youtube"
       },
 {
-        title: "O Povo Brasileiro de Darcy Ribeiro - Matriz Afro (parte 3)",
-        url: "https://youtu.be/vwj1GBEYr_s?si=pKYjllprMlagd2dh",
+        title: "Humanidade a História de Todos nós - Impérios", //52:49
+        url: "https://youtu.be/4kUdsmHtBcE?si=jEgeK4HdKriZs5Eb",
         type: "youtube"
     },
 {
-        title: "Darcy Ribeiro", //35:21
-        url: "https://player.vimeo.com/video/205497849?h=7871f98a5c",
-        type: "vimeo"
-    },
-{
-        title: "Colonização das Filipinas e imperialismo americano no Sudeste Asiático",
-        url: "https://youtu.be/5yKO0mHhHXk?si=VIv61FK-ig098AMq",
+        title: "Grandes Impérios e Civilizações 1 - O Nascimento da Civilização", //26:00
+        url: "https://youtu.be/J_n21oMxrHA?si=KliW6MDF46Cc4qBl",
         type: "youtube"
     },
 {
-        title: "Amigo (2010)",
-        url: "https://youtu.be/42Gl7uoU7hc?si=4punW5qiVbu9_nJf",
+        title: "TV EUPPC",
+        url: "https://youtu.be/FQKYXbr5rHo?si=LG89ea4FYvbR0pn6",
+        type: "youtube"
+    },
+{
+        title: "Arte Educação, SESC-MT - A colonialidade da arte - Módulo III", //20:50
+        url: "https://www.youtube.com/live/Lu0Bz50o-5M",
         type: "youtube"
     },
 {     
@@ -84,28 +84,43 @@ const schedule = [
         type: "youtube"
       },
 {
-        title: "O Complexo de Salvador Branco, A Bondade que Destrói",
-        url: "https://youtu.be/lgod0RIGW5w?si=9YvkBmcfQuR1puDR",
+        title: "O Povo Brasileiro Darcy Ribeiro (Encontros e Desencontros) parte 4", //25:50
+        url: "https://youtu.be/Dl77HvU2fUk?si=sRl7q5QO5-RMxeqQ",
         type: "youtube"
     },
 {
-        title: "O Massacre Alemão na Namíbia, O primeiro Genocídio do Século XX",
-        url: "https://youtu.be/-J5gJrW1epI?si=HBma-PmkoiZu9bRk",
+        title: "A História do Império Britânico", //3:17:01
+        url: "https://youtu.be/fk0TNNMVxYs?si=_0I9rhI2aN7kTRHc",
         type: "youtube"
     },
 {
-        title: "A terrível história de atrocidades do domínio belga no Congo",
-        url: "https://youtu.be/FXgJiThAMl8?si=STth46ktsY20caSG",
+       title: "Zoológicos Humanos, a história esquecida do racismo científico evolucionista", //55:04
+        url: "https://youtu.be/p3lJ0HOT_bA?si=O7YQYFCE9z1LhBs-",
         type: "youtube"
     },
 {
-        title: "O Genocídio Esquecido da Europa no Congo Belga",
-        url: "https://youtu.be/8R6Ysku72Po?si=6K94WOO0e6zSLBy2",
-        type: "youtube"
+        title: '🎬 <a href="https://drive.google.com/file/d/1UIVtJrR_FNGcPvsXJwMgP12AtlZJArbV/preview" target="_blank" style="color: #4CAF50; font-weight: bold;">Ver Filme Completo</a> | A Sombra e a escuridão - Trailer',
+    url: "https://youtu.be/I6cF4_502aw?si=NWE5szdtOKzpi10p",
+    type: "youtube"
     },
 {
-    title: "A Roupa dos Brancos Mortos",
-    url: "https://geo.dailymotion.com/player.html?video=x8u8f44",
-    type: "dailymotion"
-  }
+        title: "Vênus Negra (2010)", //2:38:51
+        url: "https://youtu.be/3QdOKt4oEKo?si=JCj-mAleUm_HXs65",
+        type: "youtube"
+  },
+        {
+        title: "La Negra (1966)", //58:27
+        url: "https://youtu.be/qbFJLxMGApE?si=ZRccWHPm-u6gv-_3",
+        type: "youtube"
+    },
+        {
+    title: 'A Missão (1986) - Trailer | <a href="https://drive.google.com/file/d/1YunkakApLq5eDzp1eJL3GsWl-iPbHlog/preview" target="_blank">🎬 Assistir Filme</a>',
+    url: "https://youtu.be/o7aTvYJBHw4?si=_8gJ73ztoctemmgj",
+    type: "youtube"
+},
+{
+        title: "A Roupa dos Brancos Mortos", [35:21]
+        url: "https://geo.dailymotion.com/player.html?video=x8u8f44",
+        type: "dailymotion"
+    }
 ];
