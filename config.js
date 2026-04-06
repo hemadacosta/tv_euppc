@@ -3,17 +3,17 @@
 // Tipos suportados: 'youtube', 'vimeo', 'googledrive'
 
 const schedule = [
-{
+    {
         title: "7ª Aula - EUPPC - O Casamento entre ciência e império",
         url: "https://youtu.be/6nsz0OzbsAQ",
         type: "youtube"
     },
-{     
+    {     
         title: "TV EUPPC",
         url: "https://youtu.be/FQKYXbr5rHo?si=LG89ea4FYvbR0pn6",
         type: "youtube"
       },
-{
+     {
         title: "8ª Aula - EUPPC  - Etnografia e Observação Participante, um método de pesquisa social originada na estrutura colonial imperialista",
         url: "https://youtu.be/Xgj7YxQRwW4",
         type: "youtube"
@@ -22,7 +22,7 @@ const schedule = [
         tle: "TV EUPPC",
         url: "https://youtu.be/FQKYXbr5rHo?si=LG89ea4FYvbR0pn6",
         type: "youtube"
-},
+   },
 {
         title: "O Homem que Viu o Infinito (The Man Who Knew Infinity, 2015)",
         url: "https://youtu.be/3Istn6lAnJY?si=t0HnAwpbNa2EvcBT",
@@ -98,7 +98,7 @@ const schedule = [
         url: "https://youtu.be/3QdOKt4oEKo?si=JCj-mAleUm_HXs65",
         type: "youtube"
   },
-        {
+{
         title: "La Negra (1966)",
         url: "https://youtu.be/qbFJLxMGApE?si=ZRccWHPm-u6gv-_3",
         type: "youtube"
