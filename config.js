@@ -65,7 +65,7 @@ const schedule = [
     },
 {
         title: "Arte Educação, SESC-MT - A colonialidade da arte - Módulo III",
-        url: "https://www.youtube.com/live/Lu0Bz50o-5M",
+        url: "https://www.youtube.com/embed/Lu0Bz50o-5M?si=iUAT4MySgh9JaUuD",
         type: "youtube"
     },
 {     
@@ -90,7 +90,7 @@ const schedule = [
     },
 {
         title: '🎬 <a href="https://drive.google.com/file/d/1UIVtJrR_FNGcPvsXJwMgP12AtlZJArbV/preview" target="_blank" style="color: #4CAF50; font-weight: bold;">Ver Filme Completo</a> | A Sombra e a escuridão - Trailer',
-    url: "https://youtu.be/I6cF4_502aw?si=NWE5szdtOKzpi10p",
+    url: "https://youtu.be/aabrBqDyRkA?si=M_w4n0S5YNXziMnr",
     type: "youtube"
     },
 {
