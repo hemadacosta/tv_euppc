@@ -104,11 +104,6 @@ const schedule = [
         type: "vimeo"
     },
 {
-        title: "Vênus Negra (2010)",
-        url: "https://youtu.be/3QdOKt4oEKo?si=JCj-mAleUm_HXs65",
-        type: "youtube"
-  },
-{
         title: "La Negra (1966)",
         url: "https://youtu.be/qbFJLxMGApE?si=ZRccWHPm-u6gv-_3",
         type: "youtube"
