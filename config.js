@@ -4,8 +4,8 @@
 
 const schedule = [
     {
-        title: "7ª Aula - EUPPC - O Casamento entre ciência e império",
-        url: "https://youtu.be/6nsz0OzbsAQ",
+        title: "9ª Aula - EUPPC - Hibridismos culturais: Garífunas",
+        url: "https://youtu.be/x07Vx6kEcmo",
         type: "youtube"
     },
     {     
@@ -14,8 +14,8 @@ const schedule = [
         type: "youtube"
       },
      {
-        title: "8ª Aula - EUPPC  - Etnografia e Observação Participante, um método de pesquisa social originada na estrutura colonial imperialista",
-        url: "https://youtu.be/Xgj7YxQRwW4",
+        title: "10ª Aula - EUPPC  - O Pós-colonial a partir de Stuart Hall, Ella Shohat e Chinua Achebe",
+        url: "https://youtu.be/IRV6wkq9kjw?si=uH9gG6ZoNUjnRgHY",
         type: "youtube"
     },
 {
@@ -24,8 +24,8 @@ const schedule = [
         type: "youtube"
    },
 {
-        title: "O Homem que Viu o Infinito (The Man Who Knew Infinity, 2015)",
-        url: "https://youtu.be/3Istn6lAnJY?si=t0HnAwpbNa2EvcBT",
+        title: "Introdução a Stuart Hall e as origens dos Estudos Culturais",
+        url: "https://youtu.be/51thL-texS8?si=Uu8shh72jk_EZXUt",
         type: "youtube"
     },
      {     
@@ -34,13 +34,8 @@ const schedule = [
         type: "youtube"
       },
 {
-        title: "Estranhos no Exterior - Fora da varanda (Strangers Abroad - Bronislaw Malinowski)",
-        url: "https://youtu.be/Qn_gLroH3bQ?si=pkiIzQ3zuJKLUIM0",
-        type: "youtube"
-    },
-{
-        title: "Estranhos no Exterior - As Correntes da Tradição (Franz Boas)",
-        url: "https://youtu.be/zK5lYPeAbDM?si=PXBHZtAOezBj4TO5",
+        title: "Professora Ella Shohat, Naturalização e animalização",
+        url: "https://youtu.be/jlCw9ErG29c?si=qLY0fsfoYBgvzE11",
         type: "youtube"
     },
  {     
@@ -49,13 +44,13 @@ const schedule = [
         type: "youtube"
       },
 {
-        title: "Humanidade a História de Todos nós - Impérios",
-        url: "https://youtu.be/4kUdsmHtBcE?si=jEgeK4HdKriZs5Eb",
+        title: "Chinua Achebe discursa sobre por que a África",
+        url: "https://youtu.be/EYgl0CH4zH8?si=9mq_IleBfWZp2klI",
         type: "youtube"
     },
 {
-        title: "Grandes Impérios e Civilizações 1 - O Nascimento da Civilização",
-        url: "https://youtu.be/J_n21oMxrHA?si=KliW6MDF46Cc4qBl",
+        title: "O mundo se despedaça, de Chinua Achebe | por Ana Lis Soares",
+        url: "https://youtu.be/J-1IhuzNfYI?si=dit1wk9MKzWnWzbi",
         type: "youtube"
     },
 {
@@ -64,8 +59,8 @@ const schedule = [
         type: "youtube"
     },
 {
-        title: "Arte Educação, SESC-MT - A colonialidade da arte - Módulo III",
-        url: "https://www.youtube.com/embed/Lu0Bz50o-5M?si=iUAT4MySgh9JaUuD",
+        title: "1492, A conquista do Paraíso (1992)",
+        url: "https://youtu.be/KSv7zlSIBVc?si=XvZaEaXwiEIp-BLU",
         type: "youtube"
     },
 {     
@@ -73,25 +68,40 @@ const schedule = [
         url: "https://youtu.be/FQKYXbr5rHo?si=LG89ea4FYvbR0pn6",
         type: "youtube"
       },
-{
-        title: "O Povo Brasileiro Darcy Ribeiro (Encontros e Desencontros) parte 4",
-        url: "https://youtu.be/Dl77HvU2fUk?si=sRl7q5QO5-RMxeqQ",
-        type: "youtube"
-    },
-{
-        title: "A História do Império Britânico",
-        url: "https://youtu.be/fk0TNNMVxYs?si=_0I9rhI2aN7kTRHc",
-        type: "youtube"
-    },
-{
-       title: "Zoológicos Humanos, a história esquecida do racismo científico evolucionista",
-        url: "https://youtu.be/p3lJ0HOT_bA?si=O7YQYFCE9z1LhBs-",
-        type: "youtube"
-    },
-{
-        title: '🎬 <a href="https://drive.google.com/file/d/1UIVtJrR_FNGcPvsXJwMgP12AtlZJArbV/preview" target="_blank" style="color: #4CAF50; font-weight: bold;">Ver Filme Completo</a> | A Sombra e a escuridão - Trailer',
-    url: "https://youtu.be/aabrBqDyRkA?si=M_w4n0S5YNXziMnr",
+    {
+    title: '🎬 <a href="https://drive.google.com/file/d/1nosjwc8YC_J5QQAO2fkXxYjfhWaZarm9/preview" target="_blank" style="color: #4CAF50; font-weight: bold;">Ver Filme Completo</a> Diamante de Sangue (2006) - Trailer', //2:17
+    url: "https://youtu.be/5wHxPWRlkUg?si=pJFOIZvfj6-e64Kq",
     type: "youtube"
+    },
+    {
+        title: "Diálogos - Desafios para a decolonialidade",
+        url: "https://youtu.be/qFZki_sr6ws?si=fYR7cqk7bb7QRrIo",
+        type: "youtube"
+    }, 
+{
+        title: "O Povo Brasileiro Darcy Ribeiro - O Brasil Crioulo - parte 5",
+        url: "https://youtu.be/oObneYXQedk?si=JmNyujDAnZWTzIoA",
+        type: "youtube"
+    },
+{
+        title: "María Lugones e a crítica ao pensamento colonial",
+        url: "https://youtu.be/-hjThulgEPI?si=AeO9mveyFSB5L3ax",
+        type: "youtube"
+    },
+{
+       title: "Mulherismo Africana",
+        url: "https://youtu.be/rYjbAC_ij_Q?si=h2l8LY2khRfw5FQq",
+        type: "youtube"
+    },
+    {     
+        title: "TV EUPPC",
+        url: "https://youtu.be/FQKYXbr5rHo?si=LG89ea4FYvbR0pn6",
+        type: "youtube"
+      },
+{
+        title: "Independência (2015)",
+        url: "https://player.vimeo.com/video/337573703?h=88c00d5c50",
+        type: "vimeo"
     },
 {
         title: "Vênus Negra (2010)",
@@ -104,13 +114,23 @@ const schedule = [
         type: "youtube"
     },
         {
-    title: 'A Missão (1986) - Trailer | <a href="https://drive.google.com/file/d/1YunkakApLq5eDzp1eJL3GsWl-iPbHlog/preview" target="_blank">🎬 Assistir Filme</a>',
-    url: "https://youtu.be/o7aTvYJBHw4?si=_8gJ73ztoctemmgj",
-    type: "youtube"
-},
+        title: "Una verdadera Historia sobre Nosotros los Garifunas",
+        url: "https://youtu.be/XnfII70hVzg?si=_C1qt6lqdwM9F8rJ",
+        type: "youtube"
+    },
 {
-        title: "A Roupa dos Brancos Mortos",
-        url: "https://geo.dailymotion.com/player.html?video=x8u8f44",
-        type: "dailymotion"
-    }
+        title: "Aurelio - Lándini (teaser clip)",
+        url: "https://youtu.be/_KgzUkucqII?si=YJL6Rj2etIWYe_Rx",
+        type: "youtube"
+    },
+    {
+    title: "Yurumein | La historia Garífuna de resistencia y herencia cultural en Guatemala",
+        url: "https://youtu.be/ayA09Vb6438?si=wjy9tV8LmFrgrkUZ",
+        type: "youtube"
+    },
+    {
+    title: '🎬 <a href="https://drive.google.com/file/d/1MioKnMk7mH6Mqla0b0rRRFW7ac6yCbI5/preview" target="_blank" style="color: #4CAF50; font-weight: bold;">Ver Filme Completo</a> Pantera Negra (2018) - Trailer',
+    url: "https://youtu.be/_Z3QKkl1WyM?si=hZctbT8qsvh65C3G",
+    type: "youtube"
+}
 ];
