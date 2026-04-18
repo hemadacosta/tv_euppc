@@ -1,3 +1,4 @@
+
 // script.js (v12) — Botões condicionais por dispositivo + Otimizado para Mobile
 // DESKTOP: Botões aparecem apenas no hover
 // MOBILE/TABLET: Botões aparecem apenas ao tocar na tela
@@ -683,13 +684,18 @@ function loadDailymotion(url, allowAutoplay) {
 function extractDriveFileId(url) {
   if (!url) return null;
   const u = String(url);
-  const m1 = u.match(/\/file\/d\/([^\/]+)\//);
+
+  // Formato: /file/d/{fileId}/view  ou  /file/d/{fileId}/preview
+  const m1 = u.match(/\/file\/d\/([a-zA-Z0-9_-]+)/);
   if (m1) return m1[1];
+
+  // Formato: ?id={fileId}  (links diretos antigos)
   try {
     const parsed = new URL(u, window.location.href);
     const id = parsed.searchParams.get('id');
     if (id) return id;
   } catch (_) {}
+
   return null;
 }
 
@@ -697,58 +703,44 @@ function loadGoogleDrive(url) {
   const fileId = extractDriveFileId(url);
   if (!fileId) {
     console.error("ID Drive não encontrado:", url);
-    updateInfo("Erro no Drive", "Não encontrei o ID do arquivo.");
+    updateInfo("Erro no Drive", "Não encontrei o ID do arquivo. Verifique a URL.");
     return;
   }
 
+  console.log("Carregando vídeo Google Drive, fileId:", fileId);
+
   clearPlayerContainer();
   const container = document.getElementById('player');
-  const directUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
+
+  // O Google Drive só suporta embed via iframe /preview.
+  // A abordagem com <video src="uc?export=download"> falha por CORS,
+  // redirecionamentos de aviso antivírus e ausência de suporte a range requests.
+  const previewUrl = `https://drive.google.com/file/d/${fileId}/preview`;
 
   container.innerHTML = `
-    <video id="drive-video" width="100%" height="100%" playsinline
-      ${autoplayEnabled ? "autoplay" : ""} muted controls
-      style="background:#000; width:100%; height:100%; object-fit:contain;"
-    >
-      <source src="${directUrl}" type="video/mp4">
-      Seu navegador não suporta vídeo HTML5.
-    </video>
+    <iframe
+      id="drive-player"
+      src="${previewUrl}"
+      width="100%"
+      height="100%"
+      frameborder="0"
+      allow="autoplay; fullscreen"
+      allowfullscreen
+      style="border:0; width:100%; height:100%; position:absolute; top:0; left:0;"
+    ></iframe>
   `;
 
-  const vid = document.getElementById('drive-video');
-  if (!vid) return;
+  // Nota: iframes cross-origin do Drive não disparam eventos 'ended'.
+  // O avanço automático não é possível via JS puro — o usuário pode
+  // avançar manualmente com o botão "próximo" ou swipe.
 
-  try { vid.volume = Math.max(0, Math.min(1, currentVolume / 100)); } catch(_) {}
-  vid.muted = true;
-
-  vid.addEventListener('ended', () => {
-    setTimeout(() => {
-      manualControl = false;
-      playNext(true);
-    }, 800);
-  });
-
-  vid.addEventListener('error', () => {
-    container.innerHTML = `
-      <iframe
-        src="https://drive.google.com/file/d/${fileId}/preview"
-        width="100%" height="100%"
-        allow="autoplay"
-        allowfullscreen
-        style="border:0;"
-      ></iframe>
-    `;
-    updateInfo(
-      document.getElementById('video-title')?.innerText || "Vídeo",
-      "Drive: este vídeo pode exigir clique no play (limitação do Drive)."
-    );
-  });
+  const statusMsg = isTouchDevice
+    ? "Drive: toque em ▶ no player para iniciar o vídeo."
+    : "Drive: clique em ▶ no player para iniciar. Use o botão → para avançar.";
 
   updateInfo(
     document.getElementById('video-title')?.innerText || "Vídeo",
-    autoplayEnabled
-      ? "Drive: iniciando (silencioso). Ajuste o volume para ativar som."
-      : "Drive: pronto. Clique em play para iniciar."
+    statusMsg
   );
 }
 
