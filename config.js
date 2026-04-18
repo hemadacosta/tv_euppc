@@ -104,8 +104,8 @@ const schedule = [
     type: "youtube"
     },
     {
-    title: "Vênus Negra (2010)",
-    url: "https://youtu.be/3QdOKt4oEKo?si=JCj-mAleUm_HXs65",
+    title: '🎬 <a href="https://drive.google.com/file/d/1d31t8BXwCRT0Z7TS7QEU_1gtO8EXiO71/preview" target="_blank" style="color: #4CAF50; font-weight: bold;">Ver Filme Completo</a> Vênus Negra (2010) - Trailer',
+    url: "https://youtu.be/AIfYvmFxVCg?si=mzX7bbsG8Fdas0Kr",
     type: "youtube"
     },
     {     
