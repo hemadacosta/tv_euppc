@@ -100,7 +100,7 @@ const schedule = [
     },
     {
     title: '🎬 <a href="https://drive.google.com/file/d/1UIVtJrR_FNGcPvsXJwMgP12AtlZJArbV/preview" target="_blank" style="color: #4CAF50; font-weight: bold;">Ver Filme Completo</a> | A Sombra e a escuridão - Trailer',
-    url: "https://youtu.be/I6cF4_502aw?si=NWE5szdtOKzpi10p",
+    url: "https://youtu.be/aabrBqDyRkA?si=EViuD4XKW0FzXorH",
     type: "youtube"
     },
     {
