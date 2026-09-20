@@ -20,7 +20,7 @@ const schedule = [
     },
     {
     title: "TV ECT",
-    url: "https://youtu.be/7t_vyWPGD2s?si=Zn70raI1AmqbZHxP",
+    url: "https://www.youtube.com/embed/V68FEoW1Jwo?si=sh3W5q41mu7kqONP",
     type: "youtube"
     },
     {
