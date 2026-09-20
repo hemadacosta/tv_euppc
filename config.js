@@ -25,7 +25,7 @@ const schedule = [
     },
     {
     title: "O livro didático, da transposição didática à análise de conteúdo",
-    url: "https://www.youtube.com/live/V68FEoW1Jwo?si=38bnVba8ZFqZFCWB",
+    url: "https://www.youtube.com/live/V68FEoW1Jwo?si=CWeBe45qb-Z61BX5",
     type: "youtube"
     },
     {
