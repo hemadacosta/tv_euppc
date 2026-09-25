@@ -19,7 +19,7 @@ const schedule = [
     type: "youtube"
     },
     {
-    title: "Schooling the World, The White Man’s Last Burden (2010)",
+    title: "Schooling the World, The White Mans Last Burden (2010)",
     url: "https://youtu.be/6t_HN95-Urs?si=GD3WO4Skz3RdGu0f", 
     type: "youtube"
     },
