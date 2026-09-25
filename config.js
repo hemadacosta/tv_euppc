@@ -123,4 +123,4 @@ const schedule = [
     url: "https://youtu.be/7t_vyWPGD2s?si=Zn70raI1AmqbZHxP",
     type: "youtube"
     }
-    ],
+    ];
