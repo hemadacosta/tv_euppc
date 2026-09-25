@@ -105,7 +105,7 @@ const schedule = [
     },
     {
     title: "Construtivismo e Aprendizagem Significativa",
-    url: "https://vimeo.com/1166696346?fl=pl&fe=cm",
+    url: "https://vimeo.com/1166696346",
     type: "vimeo"
     },
     {
