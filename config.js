@@ -115,7 +115,7 @@ const schedule = [
     },
     {
     title: "Lucy (2014)",
-    url: "https://drive.google.com/file/d/1ew1CduTWKZ9ncYmVEii3_GY0tVY0JTvj/view?usp=sharing",
+    url: "https://drive.google.com/file/d/1ew1CduTWKZ9ncYmVEii3_GY0tVY0JTvj/preview",
     type: "googledrive"
     },
     {
