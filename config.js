@@ -115,7 +115,7 @@ const schedule = [
     },
     {
     title: "Lucy (2014)",
-    url: "https://cdnst80.tokyvideo.com/videos/733/733037/mp4/628011dcf9a93b7fd7183acd6b68aa2da15e16e335fa5ac5c24e716cc098466e.mp4?secure=LnAOhf4WvweIKAHax_p6EA%3D%3D%2C1790450132",
+    url: "https://drive.google.com/file/d/1ew1CduTWKZ9ncYmVEii3_GY0tVY0JTvj/view?usp=sharing",
     type: "googledrive"
     },
     {
