@@ -4,8 +4,8 @@
 
 const schedule = [
     {
-    title: "10ª Aula - Transposição didática de conhecimentos científicos e tecnológicos",
-    url: "https://youtu.be/RCARjRpDdlw?si=MI9SH_mCl3QeUFCx",
+    title: "12ª Aula - ECT1 - Estudo das representações (conhecimentos) dos alunos", // 1h00min10s
+    url: "https://youtu.be/f5HGiS26Sno?si=yER0tnmvzJlQQfKZ",
     type: "youtube"
     },
     {
@@ -14,108 +14,113 @@ const schedule = [
     type: "youtube"
     },
     {
-    title: "11ª Aula - História da Ciência - Vídeo Doador de Órgãos",
-    url: "https://youtu.be/qLuqCeT5gd8?si=envjjXr1w_6FZ-tv",
+    title: "Teorias da Aprendizagem - Contribuições da Teoria da Aprendizagem Significativa para o Ensino", // 15min17s
+    url: "https://youtu.be/WiZ7O4QLyNU?si=vOSU1oQvC_zrCCA6",
+    type: "youtube"
+    },
+    {
+    title: "Schooling the World, The White Man’s Last Burden (2010)", // 1h04min52s
+    url: "https://youtu.be/6t_HN95-Urs?si=GD3WO4Skz3RdGu0f", 
     type: "youtube"
     },
     {
     title: "TV ECT",
-    url: "https://www.youtube.com/embed/V68FEoW1Jwo?si=sh3W5q41mu7kqONP",
+    url: "https://youtu.be/7t_vyWPGD2s?si=Zn70raI1AmqbZHxP",
     type: "youtube"
     },
     {
-    title: "O livro didático, da transposição didática à análise de conteúdo",
-    url: "https://www.youtube.com/live/V68FEoW1Jwo?si=CWeBe45qb-Z61BX5",
+    title: "O Vento Será Tua Herança - Inherit The Wind - (1999)", // 1h48min45s
+    url: "https://youtu.be/NYCfo4hVolQ?si=PW0JjG9aPcqMmx1g", 
     type: "youtube"
     },
     {
-    title: "Sociedade dos Poetas Mortos (1989)",
-    url: "https://drive.google.com/file/d/1zUEijLJLn5GUspzX5jEvP3cwx6RmUARZ/preview",
+    title: "TV ECT",
+    url: "https://youtu.be/7t_vyWPGD2s?si=Zn70raI1AmqbZHxP",
+    type: "youtube"
+    },
+    {
+    title: "Aula Pública - Concepções alternativas e ensino de ciências", // 43min02s
+    url: "https://youtu.be/rNBR5VbReRc?si=rKBHXooUDExBAjkm", 
+    type: "youtube"
+    },
+    {
+    title: "Mudança Conceitual no Ensino de Ciências", // 51min41s
+    url: "https://youtu.be/Hlyy-dZzdmw?si=pLe4sZrJsmKPha4R",
+    type: "youtube"
+    },
+    {
+    title: "TV ECT",
+    url: "https://youtu.be/7t_vyWPGD2s?si=Zn70raI1AmqbZHxP",
+    type: "youtube"
+    },
+    {
+    title: "Wall-e (2008)",
+    url: "https://drive.google.com/file/d/1VVTxpDcqaS42xqpCqQFxogmByE7NtJNw/preview", // 1h38min12s
     type: "googledrive"
     },
-    {   
+    {
     title: "TV ECT",
     url: "https://youtu.be/7t_vyWPGD2s?si=Zn70raI1AmqbZHxP",
     type: "youtube"
     },
     {
-    title: "O Céu de Outubro (1999)",
-    url: "https://drive.google.com/file/d/17vwMhZKRMWKFRAe5eg7WAOZvAUh1XS7U/view?usp=sharing",
+    title: "Perdido em Marte (The Martian) 2015", // 2h31min21s
+    url: "https://drive.google.com/file/d/1unabNUQcaAWo1pxgJVnNs9v_c-c9MGtF/preview",
     type: "googledrive"
     },
-    {   
-    title: "TV ECT",
-    url: "https://youtu.be/7t_vyWPGD2s?si=Zn70raI1AmqbZHxP",
-    type: "youtube"
-    },
-    {     
-    title: "Tripas, O Estranho e Misterioso Mundo da Digestão Humana",
-    url: "https://youtu.be/LPECOKQxwO4?si=__OntSIiIJiClCnh",
-    type: "youtube"
-    },
-    {   
+    {
     title: "TV ECT",
     url: "https://youtu.be/7t_vyWPGD2s?si=Zn70raI1AmqbZHxP",
     type: "youtube"
     },
     {
-    title: "Monstruosidades, documentário H2",
-    url: "https://drive.google.com/file/d/1erH9bFaLziGZWNaLfNH9eM3b_7NQHc7d/preview",
+    title: "O Menino que Descobriu o Vento (The Boy Who Harnessed the Wind, 2019)", //1h53min58s
+    url: "https://drive.google.com/file/d/16SzUmXTw9-qQJiQb-vPOGMumf5b-UUn9/preview",
     type: "googledrive"
     },
-    {     
-    title: "Gênio ou Monstro O Médico que Torturava pela Ciência",
-    url: "https://youtu.be/-QzuW-Qcc0E?si=F_pAuOJ08I1QONf9",
+    {
+    title: "Cosmos Carl Sagan Ep. 6 - Histórias de Viajantes", // 1h01min13s
+    url: "https://youtu.be/tKd-CCPFV_4?si=dld2n_Fn7GHUci8R",
     type: "youtube"
     },
     {
-    title: "Quase Deuses (2004)",
-    url: "https://youtu.be/2b4peUNL710?si=BzokINNMj_bSM8FG",
-    type: "youtube"
-    },
-    {
-    title: "Didática para Ciências e Biologia - Aula 14 - Transposição didática",
-    url: "https://youtu.be/pp8QK--Fyjk?si=5qtZPmHdfXI3Aos6",
-    type: "youtube"
-    },
-    {
-    title: "Entrevista a Yves Chevallard",
-    url: "https://youtu.be/tILQ9sb6e4Q?si=-4ju0h6u0pxG1q72",
-    type: "youtube"
-    },
-    {
-    title: "Cobaias (1997)",
-    url: "https://youtu.be/WSzbN4-uWaY?si=LQxNb5OFiDjzXOoz",
-    type: "youtube"
-    },
-    {   
     title: "TV ECT",
     url: "https://youtu.be/7t_vyWPGD2s?si=Zn70raI1AmqbZHxP",
     type: "youtube"
     },
     {
-    title: "Cosmos - Episódio 05 - O Blues do Planeta Vermelho",
-    url: "https://youtu.be/4ZCHmoIGDAc?si=BMXdBS8z3aTBhzv_",
-    type: "youtube"
-    },
-    {   
-    title: "TV ECT",
-    url: "https://youtu.be/7t_vyWPGD2s?si=Zn70raI1AmqbZHxP",
-    type: "youtube"
+    title: "Timor-Leste, o massacre que o mundo não viu (2001)", // 1h15min12s
+    url: "https://drive.google.com/file/d/1YyOVp0v6Rrem8GwyodD2fGsFoVBCuCCj/preview",
+    type: "googledrive"
     },
     {
-    title: "Experimento Ilegal - Mistério",
-    url: "https://youtu.be/LnewLcXn5c8?si=RiRb6GLSKk8vEUhI",
-    type: "youtube"
-    },
-    {
-    title: "O Universo Secreto das Células (2012)",
-    url: "https://geo.dailymotion.com/player.html?video=x37ogk1",
+    title: "A Origem Da Vida - Criação ou Evolução", // 42min52s
+    url: "https://dai.ly/x9wgkv4",
     type: "dailymotion"
     },
     {
     title: "TV ECT",
     url: "https://youtu.be/7t_vyWPGD2s?si=Zn70raI1AmqbZHxP",
     type: "youtube"
+    },
+    {
+    title: "Construtivismo e Aprendizagem Significativa",
+    url: "https://vimeo.com/1166696346?fl=pl&fe=cm",
+    type: "vimeo"
+    },
+    {
+    title: "Armageddon (1998)",
+    url: "https://youtu.be/F2kgc9z8Hr8",
+    type: "youtube"
+    },
+    {
+    title: "Lucy (2014)",
+    url: "https://cdnst80.tokyvideo.com/videos/733/733037/mp4/628011dcf9a93b7fd7183acd6b68aa2da15e16e335fa5ac5c24e716cc098466e.mp4?secure=LnAOhf4WvweIKAHax_p6EA%3D%3D%2C1790450132",
+    type: "googledrive"
+    },
+    {
+    title: "TV ECT",
+    url: "https://youtu.be/7t_vyWPGD2s?si=Zn70raI1AmqbZHxP",
+    type: "youtube"
     }
-    ];
+    ],
