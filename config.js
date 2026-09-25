@@ -4,7 +4,7 @@
 
 const schedule = [
     {
-    title: "12ª Aula - ECT1 - Estudo das representações (conhecimentos) dos alunos", // 1h00min10s
+    title: "12ª Aula - ECT1 - Estudo das representações (conhecimentos) dos alunos",
     url: "https://youtu.be/f5HGiS26Sno?si=yER0tnmvzJlQQfKZ",
     type: "youtube"
     },
@@ -14,12 +14,12 @@ const schedule = [
     type: "youtube"
     },
     {
-    title: "Teorias da Aprendizagem - Contribuições da Teoria da Aprendizagem Significativa para o Ensino", // 15min17s
+    title: "Teorias da Aprendizagem - Contribuições da Teoria da Aprendizagem Significativa para o Ensino",
     url: "https://youtu.be/WiZ7O4QLyNU?si=vOSU1oQvC_zrCCA6",
     type: "youtube"
     },
     {
-    title: "Schooling the World, The White Man’s Last Burden (2010)", // 1h04min52s
+    title: "Schooling the World, The White Man’s Last Burden (2010)",
     url: "https://youtu.be/6t_HN95-Urs?si=GD3WO4Skz3RdGu0f", 
     type: "youtube"
     },
@@ -29,7 +29,7 @@ const schedule = [
     type: "youtube"
     },
     {
-    title: "O Vento Será Tua Herança - Inherit The Wind - (1999)", // 1h48min45s
+    title: "O Vento Será Tua Herança - Inherit The Wind - (1999)",
     url: "https://youtu.be/NYCfo4hVolQ?si=PW0JjG9aPcqMmx1g", 
     type: "youtube"
     },
@@ -39,12 +39,12 @@ const schedule = [
     type: "youtube"
     },
     {
-    title: "Aula Pública - Concepções alternativas e ensino de ciências", // 43min02s
+    title: "Aula Pública - Concepções alternativas e ensino de ciências",
     url: "https://youtu.be/rNBR5VbReRc?si=rKBHXooUDExBAjkm", 
     type: "youtube"
     },
     {
-    title: "Mudança Conceitual no Ensino de Ciências", // 51min41s
+    title: "Mudança Conceitual no Ensino de Ciências",
     url: "https://youtu.be/Hlyy-dZzdmw?si=pLe4sZrJsmKPha4R",
     type: "youtube"
     },
@@ -55,7 +55,7 @@ const schedule = [
     },
     {
     title: "Wall-e (2008)",
-    url: "https://drive.google.com/file/d/1VVTxpDcqaS42xqpCqQFxogmByE7NtJNw/preview", // 1h38min12s
+    url: "https://drive.google.com/file/d/1VVTxpDcqaS42xqpCqQFxogmByE7NtJNw/preview",
     type: "googledrive"
     },
     {
@@ -64,7 +64,7 @@ const schedule = [
     type: "youtube"
     },
     {
-    title: "Perdido em Marte (The Martian) 2015", // 2h31min21s
+    title: "Perdido em Marte (The Martian) 2015",
     url: "https://drive.google.com/file/d/1unabNUQcaAWo1pxgJVnNs9v_c-c9MGtF/preview",
     type: "googledrive"
     },
@@ -74,12 +74,12 @@ const schedule = [
     type: "youtube"
     },
     {
-    title: "O Menino que Descobriu o Vento (The Boy Who Harnessed the Wind, 2019)", //1h53min58s
+    title: "O Menino que Descobriu o Vento (The Boy Who Harnessed the Wind, 2019)",
     url: "https://drive.google.com/file/d/16SzUmXTw9-qQJiQb-vPOGMumf5b-UUn9/preview",
     type: "googledrive"
     },
     {
-    title: "Cosmos Carl Sagan Ep. 6 - Histórias de Viajantes", // 1h01min13s
+    title: "Cosmos Carl Sagan Ep. 6 - Histórias de Viajantes",
     url: "https://youtu.be/tKd-CCPFV_4?si=dld2n_Fn7GHUci8R",
     type: "youtube"
     },
@@ -89,12 +89,12 @@ const schedule = [
     type: "youtube"
     },
     {
-    title: "Timor-Leste, o massacre que o mundo não viu (2001)", // 1h15min12s
+    title: "Timor-Leste, o massacre que o mundo não viu (2001)",
     url: "https://drive.google.com/file/d/1YyOVp0v6Rrem8GwyodD2fGsFoVBCuCCj/preview",
     type: "googledrive"
     },
     {
-    title: "A Origem Da Vida - Criação ou Evolução", // 42min52s
+    title: "A Origem Da Vida - Criação ou Evolução",
     url: "https://dai.ly/x9wgkv4",
     type: "dailymotion"
     },
