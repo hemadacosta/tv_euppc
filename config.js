@@ -104,11 +104,6 @@ const schedule = [
     type: "youtube"
     },
     {
-    title: "Construtivismo e Aprendizagem Significativa",
-    url: "https://vimeo.com/1166696346",
-    type: "vimeo"
-    },
-    {
     title: "Armageddon (1998)",
     url: "https://youtu.be/F2kgc9z8Hr8",
     type: "youtube"
