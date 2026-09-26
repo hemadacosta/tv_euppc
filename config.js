@@ -59,8 +59,8 @@ const schedule = [
     type: "googledrive"
     },
     {
-    title: "Oppenheimer (2023)",
-    url: "https://cdnst80.tokyvideo.com/videos/733/733470/mp4/860ceeb97a3226a422e9b9f10d177c7ced7e4e71a5f528aad0900d189539f1ea.mp4?secure=PdXj6F7sRy5JQFgm9yTpcg%3D%3D%2C1790523947",
+    title: "Gravidade (2013)",
+    url: "https://drive.google.com/file/d/1qS_CrhceZnbwsonm7573ijFBCBrOBj-e/preview",
     type: "googledrive"
     },
     {     
