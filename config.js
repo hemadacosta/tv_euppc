@@ -59,6 +59,11 @@ const schedule = [
     type: "googledrive"
     },
     {
+    title: "Oppenheimer (2023)",
+    url: "https://cdnst80.tokyvideo.com/videos/733/733470/mp4/860ceeb97a3226a422e9b9f10d177c7ced7e4e71a5f528aad0900d189539f1ea.mp4?secure=PdXj6F7sRy5JQFgm9yTpcg%3D%3D%2C1790523947",
+    type: "googledrive"
+    },
+    {     
     title: "TV ECT",
     url: "https://youtu.be/7t_vyWPGD2s?si=Zn70raI1AmqbZHxP",
     type: "youtube"
